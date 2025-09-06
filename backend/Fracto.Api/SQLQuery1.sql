@@ -1,0 +1,1 @@
+create database Capstone_FractoDb
