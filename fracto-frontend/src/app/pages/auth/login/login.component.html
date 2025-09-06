@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+  <div class="col-md-5">
+    <div class="card p-3">
+      <h4 class="mb-3">Login</h4>
+
+      <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+      <form #f="ngForm" (ngSubmit)="submit(f)">
+  <div class="mb-3">
+    <label class="form-label">Username</label>
+    <input class="form-control"
+           [(ngModel)]="username"
+           name="username"
+           required />
+    <div class="text-danger small" *ngIf="f.submitted && !username">Username is required.</div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input type="password"
+           class="form-control"
+           [(ngModel)]="password"
+           name="password"
+           required />
+    <div class="text-danger small" *ngIf="f.submitted && !password">Password is required.</div>
+  </div>
+
+  <button class="btn btn-primary w-100" type="submit" [disabled]="f.invalid || loading">
+    {{ loading ? 'Signing in…' : 'Login' }}
+  </button>
+</form>
+
+      <div class="mt-3 text-center">
+        <small>Don't have an account? <a routerLink="/register">Register</a></small>
+      </div>
+    </div>
+  </div>
+</div>

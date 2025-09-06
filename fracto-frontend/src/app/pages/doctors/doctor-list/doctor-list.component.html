@@ -1,0 +1,80 @@
+<div class="container py-3">
+
+  <!-- Filters -->
+  <form [formGroup]="f" class="row g-2 align-items-end mb-3">
+    <div class="col-12 col-sm-6 col-md-3">
+      <label class="form-label">Search</label>
+      <input class="form-control" formControlName="q" placeholder="Doctor name..." />
+    </div>
+
+    <div class="col-6 col-md-2">
+      <label class="form-label">City</label>
+      <input class="form-control" formControlName="city" placeholder="e.g. Mumbai" />
+    </div>
+
+    <div class="col-6 col-md-3">
+      <label class="form-label">Specialization</label>
+      <select class="form-select" formControlName="specializationId">
+        <option value="">All</option>
+        <option *ngFor="let s of specializations" [value]="s.id">{{ s.name }}</option>
+      </select>
+    </div>
+
+    <div class="col-6 col-md-2">
+      <label class="form-label">Min Rating</label>
+      <select class="form-select" formControlName="minRating">
+        <option value="">Any</option>
+        <option *ngFor="let r of ratingOptions" [value]="r">{{ r }}</option>
+      </select>
+    </div>
+
+    <div class="col-6 col-md-2 d-flex gap-2">
+      <button type="button" class="btn btn-primary flex-fill" (click)="onSearch()">Search</button>
+      <button type="button" class="btn btn-outline-secondary flex-fill" (click)="onReset()">Reset</button>
+    </div>
+  </form>
+
+  <!-- Loading & Error -->
+  <div *ngIf="loading" class="text-center my-4">
+    <div class="spinner-border"></div>
+  </div>
+  <div *ngIf="!loading && error" class="alert alert-danger">{{ error }}</div>
+
+  <!-- Results -->
+  <div *ngIf="!loading && !error">
+    <div class="row g-3">
+      <div class="col-12 col-sm-6 col-lg-4" *ngFor="let d of doctors; trackBy: trackById">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body d-flex">
+            <div class="me-3">
+              <img
+                [src]="imgUrl(d.profileImagePath)"
+                (error)="onImgError($event)"
+                alt="doc"
+                class="rounded border"
+                style="width:80px; height:80px; object-fit:cover;"
+              />
+            </div>
+            <div class="flex-grow-1">
+              <h6 class="mb-1">{{ d.name }}</h6>
+              <div class="text-muted small">{{ specName(d.specializationId) }} • {{ d.city }}</div>
+              <div class="mt-1">
+                <span class="badge bg-success">{{ d.rating | number:'1.1-1' }} ★</span>
+              </div>
+              <div class="text-muted small mt-1">
+                {{ d.startTime }}–{{ d.endTime }} • {{ d.slotDurationMinutes }} mins
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 pt-0">
+            <a class="btn btn-sm btn-primary w-100" [routerLink]="['/book', d.id]">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="!doctors?.length" class="col-12">
+        <div class="text-center text-muted py-4">No doctors found.</div>
+      </div>
+    </div>
+  </div>
+</div>

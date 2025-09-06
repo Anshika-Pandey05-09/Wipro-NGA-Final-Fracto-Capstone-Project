@@ -1,0 +1,45 @@
+<nav class="navbar" [class.admin]="isAdmin">
+  <div class="container">
+    <a class="brand" routerLink="/">Fracto</a>
+
+    <ul class="nav-links">
+      <!-- Common -->
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="/">Find Doctors</a>
+      </li>
+
+      <!-- User only -->
+      <li *ngIf="isLoggedIn && !isAdmin" routerLinkActive="active">
+        <a routerLink="/my-appointments">My Appointments</a>
+      </li>
+
+      <!-- Admin only -->
+      <li *ngIf="isAdmin" routerLinkActive="active">
+        <a routerLink="/admin/appointments">Manage Appointments</a>
+      </li>
+      <li *ngIf="isAdmin" routerLinkActive="active">
+        <a routerLink="/manage-doctors">Manage Doctors</a>
+      </li>
+      <!-- Make Manage Users look like a chip/pill -->
+      <li *ngIf="isAdmin" routerLinkActive="active" class="chip">
+        <a routerLink="/admin/users">Manage Users</a>
+      </li>
+    </ul>
+
+    <div class="account-area">
+      <span *ngIf="isAdmin" class="admin-pill">Admin</span>
+
+      <ng-container *ngIf="!isLoggedIn; else loggedBlock">
+        <a class="btn" routerLink="/login">Login</a>
+        <a class="btn outline" routerLink="/register">Register</a>
+      </ng-container>
+
+      <ng-template #loggedBlock>
+        <div class="user">
+          <span class="hello" [ngClass]="isAdmin ? 'white' : 'black'">Hi, {{ username }}</span>
+          <button class="btn danger" (click)="logout()">Logout</button>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</nav>

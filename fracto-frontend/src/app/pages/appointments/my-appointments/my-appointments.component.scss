@@ -1,0 +1,18 @@
+/* keep simple */
+.card { border-radius: .75rem; }
+
+.nav-pills .nav-link { cursor: pointer; }
+
+.badge.bg-primary,
+.badge.bg-success,
+.badge.bg-secondary {
+  padding: .4rem .6rem; border-radius: .5rem;
+}
+
+/* star rating */
+.rating-row .star {
+  border: 0; background: transparent; font-size: 1.1rem; line-height: 1; padding: .2rem .3rem;
+  cursor: pointer; transition: transform .08s ease;
+}
+.rating-row .star:hover { transform: scale(1.1); }
+.rating-row .star.filled { color: #f59e0b; } /* amber-ish */

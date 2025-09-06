@@ -1,0 +1,228 @@
+/* simple spacing */
+.navbar-brand { font-weight: 700; }
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+
+  &.admin {
+    background: linear-gradient(180deg, #101820, #16212b);
+    border-bottom-color: #0e141a;
+
+    .brand,
+    .nav-links a,
+    .user .hello {
+      color: #eaf2ff;
+    }
+    .nav-links li.active a {
+      color: #89b4ff;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 16px;
+  }
+
+  .brand {
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    color: #111;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 10px;
+      border-radius: 8px;
+
+      &:hover {
+        background: rgba(0,0,0,0.05);
+      }
+    }
+
+    li.active a {
+      background: rgba(76, 132, 255, 0.12);
+      color: #2a64ff;
+    }
+  }
+
+  .account-area {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .admin-pill {
+      font-size: 12px;
+      color: #0b5;
+      background: rgba(0, 187, 85, 0.12);
+      border: 1px solid rgba(0, 187, 85, 0.35);
+      border-radius: 999px;
+      padding: 2px 8px;
+    }
+
+    .user .hello {
+      margin-right: 6px;
+      color: #333;
+    }
+
+    .btn {
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      border: 1px solid #d7d7d7;
+      background: #fff;
+      color: #333;
+      cursor: pointer;
+
+      &.outline {
+        background: transparent;
+      }
+
+      &.danger {
+        border-color: #f1c3c3;
+        color: #c62828;
+        background: #fff5f5;
+      }
+    }
+  }
+}
+
+
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+
+  &.admin {
+    background: #111827;            /* slate-900 */
+    color: #f9fafb;                 /* near white */
+    .brand { color: #f9fafb; }
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 20px;
+  color: #111827;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+
+  li {
+    a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 8px;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &.active a,
+    a:hover {
+      background: rgba(13, 110, 253, 0.10); /* bootstrap primary tint */
+    }
+  }
+
+  /* Special chip styling for Manage Users */
+  .chip a {
+    border: 1px solid #0d6efd;
+    color: #0d6efd;
+    background: transparent;
+  }
+}
+
+/* Admin mode tweaks */
+.navbar.admin {
+  .nav-links {
+    li.active a,
+    a:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+    .chip a {
+      border-color: #93c5fd;   /* light blue */
+      color: #93c5fd;
+    }
+  }
+}
+
+.account-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .admin-pill {
+    background: #d97706;  /* amber-600 */
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 999px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    background: #0d6efd;
+    color: #fff;
+    cursor: pointer;
+
+    &.outline {
+      background: transparent;
+      color: #0d6efd;
+      border-color: #0d6efd;
+    }
+    &.danger {
+      background: #dc3545;
+    }
+  }
+
+  .user .hello {
+    margin-right: 6px;
+    color: #222;
+    &.white { color: #f9fafb; }
+  }
+}
+
+/* Small screens */
+@media (max-width: 900px) {
+  .container {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}

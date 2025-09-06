@@ -1,0 +1,27 @@
+<div class="container py-3">
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Doctor Ratings</h5>
+      <p class="card-text">Average: <strong *ngIf="average !== undefined">{{average | number:'1.1-2'}}</strong><span *ngIf="average === undefined">—</span></p>
+      <form [formGroup]="form" (ngSubmit)="submit()" class="d-flex gap-2">
+        <select class="form-select w-auto" formControlName="score">
+          <option *ngFor="let r of [1,2,3,4,5]" [value]="r">{{r}}</option>
+        </select>
+        <button class="btn btn-primary" [disabled]="submitting">Rate</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h6 class="card-title">Recent Ratings</h6>
+      <ul class="list-group list-group-flush">
+        <li *ngFor="let r of list" class="list-group-item d-flex justify-content-between">
+          <span>Score: <strong>{{r.score}}</strong></span>
+          <small>{{r.createdAt | date:'medium'}}</small>
+        </li>
+        <li *ngIf="list.length === 0" class="list-group-item text-muted">No ratings yet.</li>
+      </ul>
+    </div>
+  </div>
+</div>
