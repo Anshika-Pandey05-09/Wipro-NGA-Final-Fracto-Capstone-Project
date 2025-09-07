@@ -15,7 +15,7 @@ interface LoginResponse {
 export class AuthService {
   private api = `${environment.apiUrl}/auth`;
 
-  // 🔔 Emits whenever role/login changes
+  //  Emits whenever role/login changes
   private roleSubject = new BehaviorSubject<string | null>(this.currentRole());
   role$ = this.roleSubject.asObservable();
 

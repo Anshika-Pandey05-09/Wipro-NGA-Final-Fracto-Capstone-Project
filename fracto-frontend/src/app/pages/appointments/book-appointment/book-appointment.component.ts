@@ -5,7 +5,7 @@ import { ActivatedRoute, RouterModule, Router } from '@angular/router';
 import { DoctorService } from '../../../core/services/doctor.service';
 import { AppointmentService } from '../../../core/services/appointment.service';
 import { Doctor } from 'app/models/doctor';
-import { environment } from 'environments/environment'; // ✅ add
+import { environment } from 'environments/environment'; // add
 
 @Component({
   selector: 'app-book-appointment',
@@ -82,7 +82,7 @@ export class BookAppointmentComponent implements OnInit {
     });
   }
 
-  // ✅ Build correct URL for images in uploads/* or images/* (or bare file name)
+  //  Build correct URL for images in uploads/* or images/* (or bare file name)
   imgUrl(p?: string | null): string {
     const fallback = `${this.API_ROOT}/images/default.png`;
     if (!p) return fallback;

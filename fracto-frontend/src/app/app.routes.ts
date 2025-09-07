@@ -17,7 +17,7 @@ export const routes: Routes = [
   { path: 'book/:id', component: BookAppointmentComponent, canActivate: [AuthGuard] },
   { path: 'my-appointments', component: MyAppointmentsComponent, canActivate: [AuthGuard] },
   { path: 'manage-doctors', component: ManageDoctorsComponent, canActivate: [AdminGuard] },
-  { path: 'admin/appointments', component: AdminAppointmentsComponent, canActivate: [AdminGuard] }, // ⬅ NEW
+  { path: 'admin/appointments', component: AdminAppointmentsComponent, canActivate: [AdminGuard] }, //  NEW
   { path: 'admin/users', component: ManageUsersComponent, canActivate: [AdminGuard] },
 
   { path: '**', redirectTo: '' }

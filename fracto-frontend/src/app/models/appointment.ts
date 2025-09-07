@@ -5,5 +5,5 @@ export interface Appointment {
   appointmentDate: string;
   timeSlot: string;
   status?: string;
-  doctor?: any;            // optional expanded doctor object used in UI
+  doctor?: any;            // here we can have doctor details if needed
 }
