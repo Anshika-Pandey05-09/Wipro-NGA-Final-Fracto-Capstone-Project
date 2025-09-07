@@ -16,7 +16,8 @@
           "Microsoft.EntityFrameworkCore.Design": "9.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.8",
-          "Swashbuckle.AspNetCore": "9.0.4"
+          "Swashbuckle.AspNetCore": "9.0.4",
+          "Swashbuckle.AspNetCore.Newtonsoft": "9.0.4"
         },
         "runtime": {
           "Fracto.Api.dll": {}
@@ -979,6 +980,18 @@
           "Swashbuckle.AspNetCore.SwaggerUI": "9.0.4"
         }
       },
+      "Swashbuckle.AspNetCore.Newtonsoft/9.0.4": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "9.0.8",
+          "Swashbuckle.AspNetCore.SwaggerGen": "9.0.4"
+        },
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.Newtonsoft.dll": {
+            "assemblyVersion": "9.0.4.0",
+            "fileVersion": "9.0.4.1727"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore.Swagger/9.0.4": {
         "dependencies": {
           "Microsoft.OpenApi": "1.6.25"
@@ -1802,6 +1815,13 @@
       "sha512": "sha512-4hghaogMoS87Ivjj8s7aGuGsxrsjXZpjNvahLsN+zSLrZQcV8zQyiBweBd9AXC1sGkeNYb9/hbeS1EXrZ/hKjQ==",
       "path": "swashbuckle.aspnetcore/9.0.4",
       "hashPath": "swashbuckle.aspnetcore.9.0.4.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.Newtonsoft/9.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-s3XJUj2jfwEQB0pbYVPnPtintKHxr46U6vU2rnNE5WLVS1YvCm1xXMymyCk0Yn3/dHTnizbNjkzs09ffWOHkvQ==",
+      "path": "swashbuckle.aspnetcore.newtonsoft/9.0.4",
+      "hashPath": "swashbuckle.aspnetcore.newtonsoft.9.0.4.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore.Swagger/9.0.4": {
       "type": "package",

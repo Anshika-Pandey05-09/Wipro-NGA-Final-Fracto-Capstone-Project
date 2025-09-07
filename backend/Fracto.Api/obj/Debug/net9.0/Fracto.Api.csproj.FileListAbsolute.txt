@@ -517,3 +517,4 @@ C:\Users\pande\source\repos\Fracto-Project\Fracto\backend\Fracto.Api\obj\Debug\n
 C:\Users\pande\source\repos\Fracto-Project\Fracto\backend\Fracto.Api\obj\Debug\net9.0\Fracto.Api.pdb
 C:\Users\pande\source\repos\Fracto-Project\Fracto\backend\Fracto.Api\obj\Debug\net9.0\Fracto.Api.genruntimeconfig.cache
 C:\Users\pande\source\repos\Fracto-Project\Fracto\backend\Fracto.Api\obj\Debug\net9.0\ref\Fracto.Api.dll
+C:\Users\pande\source\repos\Fracto-Project\Fracto\backend\Fracto.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.Newtonsoft.dll

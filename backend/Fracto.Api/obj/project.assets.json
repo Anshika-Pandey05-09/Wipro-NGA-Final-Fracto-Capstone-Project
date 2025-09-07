@@ -1550,6 +1550,23 @@
           "buildMultiTargeting/Swashbuckle.AspNetCore.props": {}
         }
       },
+      "Swashbuckle.AspNetCore.Newtonsoft/9.0.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "9.0.0",
+          "Swashbuckle.AspNetCore.SwaggerGen": "9.0.4"
+        },
+        "compile": {
+          "lib/net9.0/Swashbuckle.AspNetCore.Newtonsoft.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.Newtonsoft.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore.Swagger/9.0.4": {
         "type": "package",
         "dependencies": {
@@ -4978,6 +4995,22 @@
         "swashbuckle.aspnetcore.nuspec"
       ]
     },
+    "Swashbuckle.AspNetCore.Newtonsoft/9.0.4": {
+      "sha512": "s3XJUj2jfwEQB0pbYVPnPtintKHxr46U6vU2rnNE5WLVS1YvCm1xXMymyCk0Yn3/dHTnizbNjkzs09ffWOHkvQ==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.newtonsoft/9.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net8.0/Swashbuckle.AspNetCore.Newtonsoft.dll",
+        "lib/net8.0/Swashbuckle.AspNetCore.Newtonsoft.pdb",
+        "lib/net9.0/Swashbuckle.AspNetCore.Newtonsoft.dll",
+        "lib/net9.0/Swashbuckle.AspNetCore.Newtonsoft.pdb",
+        "package-readme.md",
+        "swashbuckle.aspnetcore.newtonsoft.9.0.4.nupkg.sha512",
+        "swashbuckle.aspnetcore.newtonsoft.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore.Swagger/9.0.4": {
       "sha512": "syU8U4Eg3DfhU+BBeDUh66erwDsYOhp82InXbrOsqWP3qoOfQbBtePcTetkLNanovYHYX40alZBE6gQQFtBZkQ==",
       "type": "package",
@@ -6253,7 +6286,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 9.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.8",
-      "Swashbuckle.AspNetCore >= 9.0.4"
+      "Swashbuckle.AspNetCore >= 9.0.4",
+      "Swashbuckle.AspNetCore.Newtonsoft >= 9.0.4"
     ]
   },
   "packageFolders": {
@@ -6344,6 +6378,10 @@
             "version": "[9.0.8, )"
           },
           "Swashbuckle.AspNetCore": {
+            "target": "Package",
+            "version": "[9.0.4, )"
+          },
+          "Swashbuckle.AspNetCore.Newtonsoft": {
             "target": "Package",
             "version": "[9.0.4, )"
           }
