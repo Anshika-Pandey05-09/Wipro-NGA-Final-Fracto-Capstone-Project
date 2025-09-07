@@ -36,3 +36,7 @@ This guide explains how users and admins interact with the Fracto application.
 ## Error Handling & Validation
 - Client-side form validations for inputs (required fields, email format, date checks).
 - Backend returns meaningful HTTP status codes and error messages for display.
+
+## Password Admin
+- Username - Anshika
+- Password - Anshika@123
