@@ -2,24 +2,26 @@ import { TestBed } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
-import { provideRouter } from '@angular/router';
-import { AppComponent } from './app';
+import { provideRouter, ActivatedRoute, convertToParamMap } from '@angular/router';
+import { BookAppointmentComponent } from './book-appointment.component';
 
-describe('AppComponent (smoke)', () => {
+describe('BookAppointmentComponent (smoke)', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent], 
+      imports: [BookAppointmentComponent], // If NOT standalone: use declarations:[BookAppointmentComponent]
       providers: [
         provideHttpClient(),
         provideHttpClientTesting(),
         provideRouter([]),
+        // supply a route param if your component reads one (e.g., doctorId)
+        { provide: ActivatedRoute, useValue: { snapshot: { paramMap: convertToParamMap({ doctorId: '1' }) } } },
       ],
       schemas: [NO_ERRORS_SCHEMA],
     }).compileComponents();
   });
 
   it('should create', () => {
-    const fix = TestBed.createComponent(AppComponent);
+    const fix = TestBed.createComponent(BookAppointmentComponent);
     expect(fix.componentInstance).toBeTruthy();
   });
 });

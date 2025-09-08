@@ -34,7 +34,12 @@ export class RatingsPageComponent implements OnInit {
   submit() {
     if (this.form.invalid) return;
     this.submitting = true;
-    this.ratingSvc.rate(this.doctorId, Number(this.form.value.score)).subscribe({
+    this.ratingSvc.rate({
+      appointmentId: 0, 
+      userId: 0,        
+      doctorId: this.doctorId,
+      score: Number(this.form.value.score)
+    }).subscribe({
       next: _ => { this.submitting = false; this.refresh(); },
       error: _ => { this.submitting = false; }
     });
