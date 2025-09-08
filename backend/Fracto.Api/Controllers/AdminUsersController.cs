@@ -66,7 +66,7 @@ namespace Fracto.Api.Controllers
             {
                 Username = dto.Username,
                 Email = dto.Email,
-                PasswordHash = _hasher.HashPassword(null!, dto.Password), // Identity hash
+                PasswordHash = _hasher.HashPassword(null!, dto.Password), //Here identity hash
                 Role = string.IsNullOrWhiteSpace(dto.Role) ? "User" : dto.Role
             };
 

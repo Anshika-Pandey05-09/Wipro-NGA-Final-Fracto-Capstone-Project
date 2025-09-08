@@ -248,7 +248,7 @@ public async Task<IActionResult> UserCancel(int id, [FromBody] dynamic body, Can
 
     }
 
-    // -------- DTOs / VMs --------
+    // -------- DTOs --------
     public class CreateAppointmentDto
     {
         public int UserId { get; set; }

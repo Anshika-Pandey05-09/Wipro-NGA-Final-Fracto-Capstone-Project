@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "5gGVy516vuo=",
+  "dgSpecHash": "9aF6o361TY4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pande\\source\\repos\\Fracto\\backend\\Fracto.Api.Tests\\Fracto.Api.Tests.csproj",
+  "projectFilePath": "C:\\Users\\pande\\source\\repos\\Fracto-Project\\Fracto\\backend\\Fracto.Api.Tests\\Fracto.Api.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pande\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\pande\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\pande\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\pande\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
     "C:\\Users\\pande\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.3.0\\microsoft.aspnetcore.authentication.2.3.0.nupkg.sha512",
     "C:\\Users\\pande\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
@@ -93,6 +94,7 @@
     "C:\\Users\\pande\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\pande\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\pande\\.nuget\\packages\\swashbuckle.aspnetcore\\9.0.4\\swashbuckle.aspnetcore.9.0.4.nupkg.sha512",
+    "C:\\Users\\pande\\.nuget\\packages\\swashbuckle.aspnetcore.newtonsoft\\9.0.4\\swashbuckle.aspnetcore.newtonsoft.9.0.4.nupkg.sha512",
     "C:\\Users\\pande\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\9.0.4\\swashbuckle.aspnetcore.swagger.9.0.4.nupkg.sha512",
     "C:\\Users\\pande\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\9.0.4\\swashbuckle.aspnetcore.swaggergen.9.0.4.nupkg.sha512",
     "C:\\Users\\pande\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\9.0.4\\swashbuckle.aspnetcore.swaggerui.9.0.4.nupkg.sha512",
